@@ -48,6 +48,7 @@ const updateURL = () => {
 	if (typeObj.value && versionObj.value && editionObj.value != "placeholder") {
 		const url = productList[typeObj.value][versionObj.value][editionObj.value];
 		downloadURL.href = url;
+		downloadURL.removeAttribute("disabled");
 	} else {
 		downloadURL.removeAttribute("href");
 		downloadURL.disabled = true;
